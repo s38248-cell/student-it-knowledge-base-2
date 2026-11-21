@@ -3,10 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>WARP: Git | Student IT Knowledge Base</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+  <header class="site-header page-header">
+    <p class="eyebrow">warp / ściąga</p>
+    <h1>Podstawowe polecenia Git</h1>
+    <p class="lead">Kontrola wersji, praca na branchach i współpraca z repozytorium na GitHubie.</p>
 
+    <nav class="site-nav" aria-label="Nawigacja po ściągach">
+      <a href="../index.html">Strona główna</a>
+      <a href="bash.html">UKOS: Bash</a>
+      <a href="git.html" aria-current="page">WARP: Git</a>
+      <a href="dotnet-cli.html">PRG1: .NET CLI</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section" aria-labelledby="intro-heading">
+      <p class="section-label">wprowadzenie</p>
+      <h2 id="intro-heading">Praca z repozytorium</h2>
+      <p>Git zapisuje historię zmian w projekcie i pozwala bezpiecznie pracować na osobnych branchach. GitHub służy do przechowywania repozytorium oraz współpracy przez Pull Requesty.</p>
+      <p class="info-note"><strong>Dobra praktyka:</strong> przed rozpoczęciem pracy sprawdź status repozytorium i pobierz aktualny <code>main</code>.</p>
+    </section>
+
+    <section class="content-section" aria-labelledby="commands-heading">
+      <p class="section-label">ściąga</p>
+      <h2 id="commands-heading">Najważniejsze polecenia</h2>
+      <div class="table-scroll">
+        <table class="command-table">
+          <caption>Podstawowe polecenia Git</caption>
+          <thead>
+            <tr>
+              <th scope="col">Polecenie</th>
+              <th scope="col">Przykład użycia</th>
+              <th scope="col">Znaczenie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>git clone</code></td><td><code>git clone URL</code></td><td>Pobiera zdalne repozytorium i tworzy lokalny katalog projektu.</td></tr>
+            <tr><td><code>git status</code></td><td><code>git status</code></td><td>Pokazuje gałąź oraz zmienione, nieśledzone i przygotowane pliki.</td></tr>
+            <tr><td><code>git add</code></td><td><code>git add index.html</code></td><td>Dodaje wskazane pliki do obszaru staging.</td></tr>
+            <tr><td><code>git commit</code></td><td><code>git commit -m "opis zmiany"</code></td><td>Zapisuje przygotowane zmiany w lokalnej historii.</td></tr>
+            <tr><td><code>git push</code></td><td><code>git push -u origin feature/nazwa</code></td><td>Publikuje branch i commity na GitHubie.</td></tr>
+            <tr><td><code>git pull</code></td><td><code>git pull --ff-only origin main</code></td><td>Pobiera i włącza zmiany ze zdalnej gałęzi.</td></tr>
+            <tr><td><code>git fetch</code></td><td><code>git fetch origin</code></td><td>Pobiera informacje o zmianach bez modyfikowania plików.</td></tr>
+            <tr><td><code>git branch</code></td><td><code>git branch</code></td><td>Wyświetla listę lokalnych branchy.</td></tr>
+            <tr><td><code>git switch</code></td><td><code>git switch -c feature/nazwa</code></td><td>Tworzy branch i przełącza na niego albo zmienia aktywny branch.</td></tr>
+            <tr><td><code>git log</code></td><td><code>git log --oneline -5</code></td><td>Wyświetla skróconą historię ostatnich commitów.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="workflow-heading">
+      <p class="section-label">procedura</p>
+      <h2 id="workflow-heading">Typowy przebieg pracy</h2>
+      <ol class="steps-list">
+        <li>Zsynchronizuj lokalny <code>main</code> poleceniem <code>git pull --ff-only origin main</code>.</li>
+        <li>Utwórz osobny branch dla zmiany, na przykład <code>feature/html-git</code>.</li>
+        <li>Wprowadź zmianę i sprawdź ją poleceniem <code>git status</code>.</li>
+        <li>Dodaj pliki, utwórz commit i wypchnij branch na GitHub.</li>
+        <li>Otwórz Pull Request, poproś o review i po poprawkach scal zmianę z <code>main</code>.</li>
+      </ol>
+    </section>
+
+    <section class="content-section link-section" aria-labelledby="more-heading">
+      <h2 id="more-heading">Więcej informacji</h2>
+      <ul class="resource-list">
+        <li><a href="../docs/warp/git.md">Oryginalna ściąga Markdown</a></li>
+        <li><a href="https://git-scm.com/docs" target="_blank" rel="noopener noreferrer">Oficjalna dokumentacja Git</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="../index.html">Wróć do strony głównej</a></p>
+  </footer>
 </body>
 </html>
