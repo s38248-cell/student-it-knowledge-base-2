@@ -3,10 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Student IT Knowledge Base</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <p class="eyebrow">student it knowledge base</p>
+    <h1>Baza wiedzy IT</h1>
+    <p class="lead">Praktyczne ściągi z przedmiotów informatycznych, przygotowane dla studentów.</p>
 
+    <nav class="site-nav" aria-label="Główna nawigacja">
+      <a href="pages/bash.html">UKOS: Bash</a>
+      <a href="pages/git.html">WARP: Git</a>
+      <a href="pages/dotnet-cli.html">PRG1: .NET CLI</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro-section" aria-labelledby="subjects-heading">
+      <p class="section-label">materiały</p>
+      <h2 id="subjects-heading">Przedmioty</h2>
+      <p>Wybierz temat, aby przejść do uporządkowanej ściągi z najważniejszymi poleceniami i przykładami.</p>
+
+      <ul class="topic-list">
+        <li>
+          <strong>UKOS</strong>
+          <span>Terminal Bash i podstawowe operacje na plikach.</span>
+          <a href="pages/bash.html">Otwórz ściągę Bash</a>
+        </li>
+        <li>
+          <strong>WARP</strong>
+          <span>Git, branche, commity i współpraca z GitHubem.</span>
+          <a href="pages/git.html">Otwórz ściągę Git</a>
+        </li>
+        <li>
+          <strong>PRG1</strong>
+          <span>Narzędzia .NET CLI do pracy z projektami C#.</span>
+          <a href="pages/dotnet-cli.html">Otwórz ściągę .NET CLI</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-section" aria-labelledby="usage-heading">
+      <p class="section-label">wskazówki</p>
+      <h2 id="usage-heading">Jak korzystać</h2>
+      <ol class="steps-list">
+        <li>Wybierz przedmiot z nawigacji albo listy materiałów.</li>
+        <li>Przeczytaj opis polecenia i sprawdź przykład użycia.</li>
+        <li>Skopiuj potrzebny fragment do terminala lub własnego projektu.</li>
+        <li>W razie potrzeby przejdź do oryginalnego pliku Markdown albo oficjalnej dokumentacji.</li>
+      </ol>
+      <p class="info-note"><strong>Ważne:</strong> przed wykonaniem polecenia sprawdź bieżący katalog i upewnij się, że rozumiesz jego działanie.</p>
+    </section>
+
+    <section class="content-section" aria-labelledby="docs-heading">
+      <p class="section-label">źródła</p>
+      <h2 id="docs-heading">Dokumentacja</h2>
+      <p>Podstawy HTML i CSS możesz uzupełnić w oficjalnej dokumentacji MDN:</p>
+      <ul class="resource-list">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN HTML</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN CSS</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Projekt edukacyjny do nauki narzędzi i technologii IT.</p>
+  </footer>
 </body>
 </html>

@@ -3,10 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>PRG1: .NET CLI | Student IT Knowledge Base</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  
+  <header class="site-header page-header">
+    <p class="eyebrow">prg1 / ściąga</p>
+    <h1>Obsługa projektów przez .NET CLI</h1>
+    <p class="lead">Tworzenie, przywracanie zależności, budowanie i uruchamianie aplikacji konsolowych .NET.</p>
+
+    <nav class="site-nav" aria-label="Nawigacja po ściągach">
+      <a href="../index.html">Strona główna</a>
+      <a href="bash.html">UKOS: Bash</a>
+      <a href="git.html">WARP: Git</a>
+      <a href="dotnet-cli.html" aria-current="page">PRG1: .NET CLI</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section" aria-labelledby="intro-heading">
+      <p class="section-label">wprowadzenie</p>
+      <h2 id="intro-heading">Praca z narzędziami .NET</h2>
+      <p>.NET CLI to zestaw poleceń dostępnych w terminalu. Umożliwia sprawdzenie środowiska, utworzenie projektu, pobranie zależności, kompilację i uruchomienie aplikacji.</p>
+    </section>
+
+    <section class="content-section" aria-labelledby="commands-heading">
+      <p class="section-label">ściąga</p>
+      <h2 id="commands-heading">Najważniejsze polecenia</h2>
+      <div class="table-scroll">
+        <table class="command-table">
+          <caption>Podstawowe polecenia .NET CLI</caption>
+          <thead>
+            <tr>
+              <th scope="col">Polecenie</th>
+              <th scope="col">Przykład</th>
+              <th scope="col">Znaczenie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>dotnet --version</code></td><td><code>dotnet --version</code></td><td>Sprawdza zainstalowaną wersję .NET SDK.</td></tr>
+            <tr><td><code>dotnet --list-sdks</code></td><td><code>dotnet --list-sdks</code></td><td>Wyświetla wszystkie dostępne wersje SDK.</td></tr>
+            <tr><td><code>dotnet new list</code></td><td><code>dotnet new list</code></td><td>Wyświetla dostępne szablony projektów.</td></tr>
+            <tr><td><code>dotnet new console</code></td><td><code>dotnet new console -n MyApp</code></td><td>Tworzy aplikację konsolową w katalogu <code>MyApp</code>.</td></tr>
+            <tr><td><code>dotnet restore</code></td><td><code>dotnet restore</code></td><td>Pobiera zależności wymagane przez projekt.</td></tr>
+            <tr><td><code>dotnet build</code></td><td><code>dotnet build</code></td><td>Kompiluje projekt i pokazuje komunikaty o błędach.</td></tr>
+            <tr><td><code>dotnet run</code></td><td><code>dotnet run --project MyApp</code></td><td>Buduje i uruchamia wskazany projekt.</td></tr>
+            <tr><td><code>dotnet clean</code></td><td><code>dotnet clean</code></td><td>Usuwa pliki wygenerowane podczas kompilacji.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="sequence-heading">
+      <p class="section-label">przykład</p>
+      <h2 id="sequence-heading">Utworzenie i uruchomienie aplikacji</h2>
+      <pre><code>dotnet --version
+dotnet new console -n MyApp
+cd MyApp
+dotnet restore
+dotnet build
+dotnet run
+dotnet clean</code></pre>
+    </section>
+
+    <section class="content-section link-section" aria-labelledby="more-heading">
+      <h2 id="more-heading">Więcej informacji</h2>
+      <ul class="resource-list">
+        <li><a href="../docs/prg1/dotnet-cli.md">Oryginalna ściąga Markdown</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/dotnet/core/tools/" target="_blank" rel="noopener noreferrer">Oficjalna dokumentacja .NET CLI</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="../index.html">Wróć do strony głównej</a></p>
+  </footer>
 </body>
 </html>

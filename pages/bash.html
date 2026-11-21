@@ -3,10 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>UKOS: Bash | Student IT Knowledge Base</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  
+  <header class="site-header page-header">
+    <p class="eyebrow">ukos / ściąga</p>
+    <h1>Podstawowe polecenia Bash</h1>
+    <p class="lead">Nawigacja po katalogach, operacje na plikach i wyświetlanie zawartości w terminalu.</p>
+
+    <nav class="site-nav" aria-label="Nawigacja po ściągach">
+      <a href="../index.html">Strona główna</a>
+      <a href="bash.html" aria-current="page">UKOS: Bash</a>
+      <a href="git.html">WARP: Git</a>
+      <a href="dotnet-cli.html">PRG1: .NET CLI</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section" aria-labelledby="intro-heading">
+      <p class="section-label">wprowadzenie</p>
+      <h2 id="intro-heading">Praca w terminalu</h2>
+      <p>Bash pozwala wykonywać operacje na plikach i katalogach za pomocą krótkich poleceń wpisywanych w terminalu. Przed uruchomieniem polecenia sprawdź, gdzie się znajdujesz i jaki będzie jego skutek.</p>
+
+      <h3>Bezpieczne zasady pracy</h3>
+      <ul class="topic-list compact-list">
+        <li>Sprawdź bieżący katalog poleceniem <code>pwd</code>.</li>
+        <li>Używaj <code>ls -la</code>, aby zobaczyć pliki ukryte i ich szczegóły.</li>
+        <li>Przed <code>rm</code> upewnij się, że wskazujesz właściwy plik, ponieważ polecenie omija kosz.</li>
+        <li>Najpierw testuj ścieżki i operacje na plikach tymczasowych.</li>
+      </ul>
+    </section>
+
+    <section class="content-section" aria-labelledby="commands-heading">
+      <p class="section-label">ściąga</p>
+      <h2 id="commands-heading">Najważniejsze polecenia</h2>
+      <div class="table-scroll">
+        <table class="command-table">
+          <caption>Podstawowe polecenia terminala Bash</caption>
+          <thead>
+            <tr>
+              <th scope="col">Polecenie</th>
+              <th scope="col">Przykład</th>
+              <th scope="col">Opis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>pwd</code></td><td><code>pwd</code></td><td>Wyświetla ścieżkę bieżącego katalogu.</td></tr>
+            <tr><td><code>ls</code></td><td><code>ls -la</code></td><td>Listuje pliki, także ukryte, w formacie szczegółowym.</td></tr>
+            <tr><td><code>cd</code></td><td><code>cd docs/ukos</code></td><td>Przechodzi do wskazanego katalogu.</td></tr>
+            <tr><td><code>mkdir</code></td><td><code>mkdir -p docs/ukos</code></td><td>Tworzy katalog wraz z brakującymi katalogami nadrzędnymi.</td></tr>
+            <tr><td><code>touch</code></td><td><code>touch bash.md</code></td><td>Tworzy pusty plik albo aktualizuje jego czas modyfikacji.</td></tr>
+            <tr><td><code>cp</code></td><td><code>cp bash.md backup.md</code></td><td>Kopiuje plik; dla katalogów użyj opcji <code>-r</code>.</td></tr>
+            <tr><td><code>mv</code></td><td><code>mv backup.md archive.md</code></td><td>Przenosi plik albo zmienia jego nazwę.</td></tr>
+            <tr><td><code>rm</code></td><td><code>rm archive.md</code></td><td>Usuwa plik bez użycia kosza.</td></tr>
+            <tr><td><code>cat</code></td><td><code>cat bash.md</code></td><td>Wyświetla zawartość pliku w terminalu.</td></tr>
+            <tr><td><code>clear</code></td><td><code>clear</code></td><td>Czyści zawartość widoczną w terminalu.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section link-section" aria-labelledby="more-heading">
+      <h2 id="more-heading">Więcej informacji</h2>
+      <ul class="resource-list">
+        <li><a href="../docs/ukos/bash.md">Oryginalna ściąga Markdown</a></li>
+        <li><a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="../index.html">Wróć do strony głównej</a></p>
+  </footer>
 </body>
 </html>
